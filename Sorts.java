@@ -12,16 +12,11 @@ public class Sorts{
   public static void bubbleSort(int[] data){
     boolean sorted=false;
     if(data.length<=1) sorted=true;
-    // int n=data.length;
-    // for(int i=0; i<n; n--){
     for(int n=data.length; n>1; n--){
       boolean madeSwap=false;
       if(sorted) n=0;
       else for(int i=0; i<n-1; i++){
         if(data[i]>data[i+1]){
-          // int t=data[i];
-          // data[i]=data[i+1];
-          // data[i+1]=t;
           swap(data,i,i+1);
           madeSwap=true;
         }
