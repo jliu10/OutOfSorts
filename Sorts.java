@@ -15,9 +15,9 @@ public class Sorts{
     // int n=data.length;
     // for(int i=0; i<n; n--){
     for(int n=data.length; n>0; n--){
+      boolean madeSwap=false;
       if(sorted) n=0;
       else for(int i=0; i<n-1; i++){
-        boolean madeSwap=false;
         if(data[i]>data[i+1]){
           // int t=data[i];
           // data[i]=data[i+1];
@@ -26,7 +26,10 @@ public class Sorts{
           madeSwap=true;
         }
       }
-      if()
+      if(data[n-2]>data[n-1]){
+        swap(data,n-2,n-1);
+        madeSwap=true;
+      }
       if(!madeSwap) sorted=true;
     }
   }
