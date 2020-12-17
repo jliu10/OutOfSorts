@@ -30,6 +30,14 @@ public class Sorts{
   }
 
   public static void selectionSort(int[] data){
+    for(int i=0;i+1<data.length;i++){
+      int small=i;
+      for(int j=i;j+1<data.length;j++){
+        if(data[j]<data[small]) small=j;
+      }
+      if(data[data.length-1]<data[small]) small=data.length-1;
+      if(small!=i) swap(data,small,i);
+    }
   }
 
   public static void insertionSort(int[] data){
