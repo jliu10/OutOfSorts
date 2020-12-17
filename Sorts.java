@@ -41,6 +41,23 @@ public class Sorts{
   }
 
   public static void insertionSort(int[] data){
+    for(int i=0;i<data.length;i++){
+      int index=i;
+      for(int j=i-1;j>=0;j--){
+        if(data[i]>data[j]) j=-1;
+        else index--;
+      }
+      if(index!=i) swap(data,i,index);
+    }
+    /*
+    int index=0;
+    for(int i=0;i<size();i++){
+      if(element.compareTo(get(i)) > 0) {
+        index++;
+      } else i=size();
+    }
+    swap(data,i,j);
+    */
   }
 
 
