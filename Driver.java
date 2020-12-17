@@ -20,15 +20,7 @@ public class Driver{
 
     if(args.length>2){
       int[] randDataTest = Arrays.copyOf(randData,randData.length);
-      Arrays.sort(randData);
-      Sorts.bubbleSort(randDataTest);
-      switch(args[1]){
-        case "bubble": Sorts.bubbleSort(randDataTest);
-          break;
-        case "selection": Sorts.selectionSort(randDataTest);
-          break;
-        case "insertion": Sorts.insertionSort(randDataTest);
-      }
+      Arrays.sort(randDataTest);
       if(Arrays.equals(randData,randDataTest)){
         System.out.println("Sort Correct!");
       }else{
