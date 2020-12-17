@@ -29,7 +29,11 @@ public class Sorts{
     }
   }
 
+  public static void selectionSort(int[] data){
+  }
+
   public static void insertionSort(int[] data){
   }
+
 
 }
