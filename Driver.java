@@ -10,19 +10,29 @@ public class Driver{
       randData[i] =(int)(Math.random()*10000);
     }
 
-    if(args[1].equals("bubble")){
-      Sorts.bubbleSort(randData);
+    switch(args[1]){
+      case "bubble": Sorts.bubbleSort(randData);
+        break;
+      case "selection": Sorts.selectionSort(randData);
+        break;
+      case "insertion": Sorts.insertionSort(randData);
     }
-    if(args[1].equals("test")){
-      int[] randDataBubble = Arrays.copyOf(randData,randData.length);
+
+    if(args.length>2){
+      int[] randDataTest = Arrays.copyOf(randData,randData.length);
       Arrays.sort(randData);
-      Sorts.bubbleSort(randDataBubble);
-
-
-      if( Arrays.equals(randData,randDataBubble)){
-        System.out.println("Bubble Correct!");
+      Sorts.bubbleSort(randDataTest);
+      switch(args[1]){
+        case "bubble": Sorts.bubbleSort(randDataTest);
+          break;
+        case "selection": Sorts.selectionSort(randDataTest);
+          break;
+        case "insertion": Sorts.insertionSort(randDataTest);
+      }
+      if(Arrays.equals(randData,randDataTest)){
+        System.out.println("Sort Correct!");
       }else{
-       System.out.println("Bubble Not Correct!!!!!!!!!11oneeleven");
+       System.out.println("Sort Not Correct!!!!!!!!!11oneeleven");
       }
     }
   }
