@@ -1,5 +1,5 @@
 TIMEFORMAT=%R
-TIMES=(4000 8000 16000 32000 64000 128000)
+TIMES=(4000 8000 16000 32000 64000)
 echo "Insertion equal values"
 for t in ${TIMES[@]}; do
   time java Driver $t insertion equal;
