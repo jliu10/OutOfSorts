@@ -42,11 +42,13 @@ public class Driver{
           for(int i = 0 ; i < randData.length; i++){
             randData[i] =(int)(Math.random()*10000);
           }
+          System.out.println(Arrays.toString(randData));
         }else if(args[2].equals("equal")){
           int r=(int)(Math.random()*10000);
           for(int i = 0 ; i < randData.length; i++){
             randData[i] = r;
           }
+          System.out.println(Arrays.toString(randData));
         }else if(args[2].equals("sorted")){
           for(int i = 0 ; i < randData.length; i++){
             randData[i] = (int)(Math.random()*10000);
@@ -54,8 +56,15 @@ public class Driver{
               randData[i]+=randData[i-1];
             }
           }
+          System.out.println(Arrays.toString(randData));
         }else if(args[2].equals("reversed")){
-  	      System.out.println("REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+          for(int i = 0 ; i < randData.length; i++){
+            randData[i] = (int)(Math.random()*10000);
+            if(i>0 && randData[i]>randData[i-1]){
+              randData[i]=randData[i-1]-randData[i];
+            }
+          }
+          System.out.println(Arrays.toString(randData));
         }
 
         if(args[1].equals("bubble")){
@@ -99,6 +108,7 @@ public class Driver{
            System.out.println("Insertion Not Correct!!!!!!!!!11oneeleven");
           }
         }
+        System.out.println(Arrays.toString(randData));
       }
     }
   }
